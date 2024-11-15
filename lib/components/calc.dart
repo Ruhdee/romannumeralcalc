@@ -107,18 +107,17 @@ class _CalcState extends State<Calc> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Container(
                 padding: const EdgeInsets.all(0),
                 height: 66,
-                width: c_height * 3 / 8,
                 margin: const EdgeInsets.all(8.0),
                 alignment: Alignment.bottomRight,
                 child: FittedBox(
                   child: Text(
                     out,
-                    style: const TextStyle(
-                      color: Colors.amber,
+                    style: TextStyle(
+                      color: Colors.amber[900],
                       fontSize: 50,
                       fontWeight: FontWeight.w700,
                     ),
@@ -128,7 +127,6 @@ class _CalcState extends State<Calc> {
             ),
             Expanded(
               child: Container(
-                width: c_height * 3 / 8,
                 margin: const EdgeInsets.all(8.0),
                 alignment: Alignment.centerRight,
                 child: Text(
@@ -142,6 +140,18 @@ class _CalcState extends State<Calc> {
                 ),
               ),
             ),
+            Expanded(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icontemplate(
+                    name: Icons.swap_horiz_rounded,
+                    onpress: () {
+                      Navigator.pushNamed(context, '/2');
+                    },
+                    context: context)
+              ],
+            )),
             Expanded(
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
