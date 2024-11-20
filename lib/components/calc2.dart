@@ -179,7 +179,7 @@ class _Calc2State extends State<Calc2> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Container(
                 padding: const EdgeInsets.all(0),
                 height: 66,
@@ -315,6 +315,9 @@ class _Calc2State extends State<Calc2> {
                     context: context)
               ]),
             ),
+            const Expanded(
+              child: SizedBox(),
+            )
           ],
         ),
       ),
